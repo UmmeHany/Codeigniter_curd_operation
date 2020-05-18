@@ -17,22 +17,13 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		
-		//$data["t1"]="bula";
-		//$data["t2"]="parvez";
-         $this->load->model('main_model');
+	public function index(){
+    	$this->load->model('main_model');
 		$data["fetch_data"]=$this->main_model->fetch_data();
-
 		$this->load->view('main_views',$data);
-
-		//$this->load->model('main_model');
-
 	}
 
-	public function myindex()
-	{
+	public function myindex(){
 		echo "test";
 	}
 }
